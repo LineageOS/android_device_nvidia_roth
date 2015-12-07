@@ -78,6 +78,9 @@ TARGET_POWERHAL_VARIANT := tegra
 # Recovery
 TARGET_RECOVERY_FSTAB := device/nvidia/roth/initfiles/fstab.roth
 
+# Sensors
+TARGET_SENSOR_VARIANT := tegra
+
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 WPA_SUPPLICANT_VERSION           := VER_0_8_X

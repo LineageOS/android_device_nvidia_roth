@@ -90,6 +90,12 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += power.tegra
 
+# Sensors
+PRODUCT_PACKAGES += sensors.roth \
+                    libsensors.base \
+                    libsensors.mpl \
+                    libsensors.nvs_input
+
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/comms/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
