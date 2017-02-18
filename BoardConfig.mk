@@ -47,6 +47,7 @@ TARGET_TINY_ALSA_IGNORE_SILENCE_SIZE := true
 TARGET_KERNEL_SOURCE := kernel/nvidia/roth
 TARGET_KERNEL_CONFIG := lineageos_roth_defconfig
 BOARD_KERNEL_CMDLINE := androidboot.hardware=roth
+LZMA_RAMDISK_TARGETS := recovery
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -76,7 +77,6 @@ TARGET_POWERHAL_VARIANT := tegra
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/nvidia/roth/initfiles/fstab.roth
-BOARD_CUSTOM_BOOTIMG_MK := device/nvidia/roth/shbootimg.mk
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
