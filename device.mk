@@ -29,6 +29,8 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk
 
 $(call inherit-product-if-exists, vendor/nvidia/roth/roth-vendor.mk)
 
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.name
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     device/nvidia/roth/overlay
