@@ -3,9 +3,9 @@ $(call inherit-product, device/nvidia/roth/full_roth.mk)
 
 # Inherit some common lineage stuff.
 ifeq ($(ALTERNATE_BUILD),true)
-$(call inherit-product, vendor/cm/config/common_full_tv.mk)
+$(call inherit-product, vendor/lineage/config/common_full_tv.mk)
 else
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 endif
 
 PRODUCT_NAME := lineage_roth
