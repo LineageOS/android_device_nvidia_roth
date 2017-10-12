@@ -88,22 +88,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml \
     $(LOCAL_PATH)/permissions/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
-PRODUCT_PACKAGES += power.tegra
-
 # Sensors
 PRODUCT_PACKAGES += sensors.roth \
                     libsensors.base \
                     libsensors.mpl \
                     libsensors.nvs_input
 
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/comms/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
-
-# Wireless Controller
-#$(call inherit-product-if-exists, vendor/nvidia/shield_common/blake-blobs.mk)
-
-# Console Mode
-$(call inherit-product-if-exists, vendor/nvidia/shield_common/consolemode-blobs.mk)
 
 $(call inherit-product, device/nvidia/shield-common/shield.mk)
