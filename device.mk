@@ -89,7 +89,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
 # Sensors
-PRODUCT_PACKAGES += sensors.roth \
+PRODUCT_PACKAGES += sensors.tegra \
                     libsensors.base \
                     libsensors.mpl \
                     libsensors.nvs_input
