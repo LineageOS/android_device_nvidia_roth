@@ -64,7 +64,7 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/comms/gpsconfig.xml:system/etc/gps/gpsconfig.xml
+    $(LOCAL_PATH)/comms/gpsconfig.xml:system/etc/gps/gpsconfig.xml \
     $(LOCAL_PATH)/comms/gps.conf:system/etc/gps.conf
 
 # Keychars
