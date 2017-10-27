@@ -27,6 +27,8 @@ TARGET_TEGRA_VERSION := t114
 TARGET_TEGRA_TOUCH := raydium
 TARGET_TEGRA_DISABLE_OVERLAY := true
 
+$(call inherit-product, device/nvidia/shield-common/shield.mk)
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
@@ -96,5 +98,3 @@ PRODUCT_PACKAGES += sensors.tegra \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/comms/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
-
-$(call inherit-product, device/nvidia/shield-common/shield.mk)
