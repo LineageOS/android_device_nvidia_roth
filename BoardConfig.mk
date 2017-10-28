@@ -98,3 +98,7 @@ BOARD_SEPOLICY_DIRS += device/nvidia/roth/sepolicy
 TARGET_INIT_VENDOR_LIB := libinit_roth
 TARGET_LIBINIT_DEFINES_FILE := device/nvidia/roth/init/init_roth.cpp
 
+# TWRP Support
+ifeq ($(WITH_TWRP),true)
+-include device/nvidia/roth/twrp/twrp.mk
+endif
