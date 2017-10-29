@@ -4,7 +4,7 @@
    "target_path": "kernel/nvidia/roth"
  },
  {
-   "repository": "android_hardware_nvidia_power",
-   "target_path": "hardware/nvidia/power"
+   "repository": "android_hardware_nvidia_sensors",
+   "target_path": "hardware/nvidia/sensors"
  }
 ]
