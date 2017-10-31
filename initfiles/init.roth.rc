@@ -20,8 +20,8 @@ on post-fs-data
     export MPU_DATA_DIR /data/misc/mpu
 
     write /sys/class/gpio/export 49
-    write /sys/class/gpio/gpio49/value 0
     write /sys/class/gpio/gpio49/direction out
+    write /sys/class/gpio/gpio49/value 0
     chown root system /sys/class/gpio/gpio49/value
     chmod 0664 /sys/class/gpio/gpio49/value
     chmod 0644 /sys/kernel/cluster/active
