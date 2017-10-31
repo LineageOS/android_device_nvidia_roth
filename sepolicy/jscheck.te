@@ -18,7 +18,7 @@ type jscheck_exec, exec_type, file_type;
 
 init_daemon_domain(jscheck)
 
-allow jscheck shell_exec:file read;
+allow jscheck shell_exec:file r_file_perms;
 allow jscheck sysfs:file write;
 allow jscheck input_device:dir search;
 allow jscheck input_device:chr_file getattr;
