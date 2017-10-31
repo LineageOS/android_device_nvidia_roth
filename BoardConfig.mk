@@ -36,6 +36,7 @@ TARGET_BOARD_PLATFORM := tegra
 TARGET_BOOTLOADER_BOARD_NAME := roth
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+TARGET_BOARD_INFO_FILE := device/nvidia/roth/board-info.txt
 
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
