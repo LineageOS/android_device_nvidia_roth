@@ -19,6 +19,8 @@ ro.nv.usb.pid.ncm.adb=B400
 ro.nv.usb.pid.midi=B401
 ro.nv.usb.pid.midi.adb=B400
 
+ro.bt.bdaddr_path=/mnt/factory/bluetooth/bt_mac.txt
+
 # Old omx libs
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
