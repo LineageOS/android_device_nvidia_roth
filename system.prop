@@ -18,3 +18,7 @@ ro.nv.usb.pid.ncm=B401
 ro.nv.usb.pid.ncm.adb=B400
 ro.nv.usb.pid.midi=B401
 ro.nv.usb.pid.midi.adb=B400
+
+# Old omx libs
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
