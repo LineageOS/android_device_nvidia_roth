@@ -45,6 +45,7 @@ BOARD_USES_ALSA_AUDIO := true
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/nvidia/roth
 TARGET_KERNEL_CONFIG := lineageos_roth_defconfig
+BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_CMDLINE := androidboot.hardware=roth
 LZMA_RAMDISK_TARGETS := recovery
 
