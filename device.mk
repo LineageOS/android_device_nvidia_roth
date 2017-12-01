@@ -73,12 +73,20 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/comms/gpsconfig.xml:system/etc/gps/gpsconfig.xml \
     $(LOCAL_PATH)/comms/gps.conf:system/etc/gps.conf
 
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
+
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+
 # Keychars
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keychars/Vendor_0955_Product_7202.kcm:system/usr/keychars/Vendor_0955_Product_7202.kcm
 
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.roth
 
 # Media config
