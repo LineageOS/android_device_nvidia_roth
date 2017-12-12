@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,11 +21,9 @@ ifeq ($(TARGET_DEVICE),roth)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
-LOCAL_C_INCLUDES := system/core/init \
-                    system/core/base/include
-LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
+LOCAL_C_INCLUDES := device/nvidia/shield-common/init
 LOCAL_SRC_FILES := init_roth.cpp
 LOCAL_MODULE := libinit_roth
 include $(BUILD_STATIC_LIBRARY)
 
-endif 
+endif

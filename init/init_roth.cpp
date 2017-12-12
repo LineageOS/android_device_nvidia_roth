@@ -25,36 +25,20 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <stdlib.h>
-#include <errno.h>
+#include "init_shield.h"
+#include "service_shield.h"
 
-#include "init.h"
-#include "vendor_init.h"
-#include "log.h"
-#include "util.h"
-#include "service.h"
-#include <string.h>
+void vendor_load_properties()
+{
+	//                                              device  name    model     board id  gsm support                          boot device type                  api  dpi
+	std::vector<shield_init::devices> devices = { { "roth", "thor", "SHIELD", "",       shield_init::gsm_support_type::NONE, shield_init::boot_dev_type::EMMC, 17,  0 } };
+	shield_init::build_version sav = { "5.1", "LMY47N", "01.00.32208_585.9399" };
+
+	shield_init si(devices, false, sav, std::vector<std::string>());
+	si.set_properties();
+}
 
 int vendor_handle_control_message(const std::string &msg, const std::string &arg)
 {
-    Service *sf_svc = NULL;
-    Service *zg_svc = NULL;
-
-    if (!msg.compare("restart") && !arg.compare("consolemode")) {
-        sf_svc = ServiceManager::GetInstance().FindServiceByName("surfaceflinger");
-        zg_svc = ServiceManager::GetInstance().FindServiceByName("zygote");
-
-        if (sf_svc && zg_svc) {
-            zg_svc->Stop();
-            sf_svc->Stop();
-            sf_svc->Start();
-            zg_svc->Start();
-        } else {
-            ERROR("Required services not found to toggle console mode");
-        }
-
-        return 0;
-    }
-
-    return -EINVAL;
+    return shield_handle_control_message(msg, arg);
 }

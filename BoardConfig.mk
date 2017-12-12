@@ -96,7 +96,7 @@ BOARD_HARDWARE_CLASS := device/nvidia/roth/cmhw/
 BOARD_SEPOLICY_DIRS += device/nvidia/roth/sepolicy
 
 # Vendor Init
-TARGET_INIT_VENDOR_LIB := libinit_roth
+TARGET_INIT_VENDOR_LIB := libinit_shield libinit_roth
 TARGET_LIBINIT_DEFINES_FILE := device/nvidia/roth/init/init_roth.cpp
 
 # TWRP Support
