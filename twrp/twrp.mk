@@ -1,4 +1,4 @@
-PRODUCT_COPY_FILES += device/nvidia/shieldtablet/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/nvidia/roth/twrp/twrp.fstab:recovery/root/etc/twrp.fstab
 
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
