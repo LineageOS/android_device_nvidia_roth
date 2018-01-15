@@ -22,10 +22,16 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 TARGET_SCREEN_HEIGHT := 720
 TARGET_SCREEN_WIDTH := 1280
 
-PRODUCT_CHARACTERISTICS := tablet shield
 TARGET_TEGRA_VERSION := t114
 TARGET_TEGRA_TOUCH := raydium
 TARGET_TEGRA_DISABLE_OVERLAY := true
+
+# ATV Support
+ifeq ($(ALTERNATE_BUILD),true)
+$(call inherit-product, device/nvidia/roth/device_atv.mk)
+else
+$(call inherit-product, device/nvidia/roth/device_tablet.mk)
+endif
 
 $(call inherit-product, device/nvidia/shield-common/shield.mk)
 
@@ -51,8 +57,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -87,8 +92,7 @@ PRODUCT_COPY_FILES += \
 # NVIDIA. The last one is needed here because roth doesn't have a compass.
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/com.nvidia.feature.xml:system/etc/permissions/com.nvidia.feature.xml \
-    $(LOCAL_PATH)/permissions/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml \
-    $(LOCAL_PATH)/permissions/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
+    $(LOCAL_PATH)/permissions/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml
 
 # Scripts
 PRODUCT_PACKAGES += input_cfboost_init.sh \
