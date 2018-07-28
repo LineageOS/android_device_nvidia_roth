@@ -35,7 +35,6 @@ endif
 $(call inherit-product, device/nvidia/shield-common/shield.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 $(call inherit-product-if-exists, vendor/nvidia/shield/roth.mk)
 
