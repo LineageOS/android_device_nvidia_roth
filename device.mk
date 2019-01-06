@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+TARGET_REFERENCE_DEVICE ?= roth
+TARGET_TEGRA_VARIANT    ?= common
+
 $(call inherit-product, device/nvidia/t114-common/t114.mk)
 
 PRODUCT_CHARACTERISTICS  := tv

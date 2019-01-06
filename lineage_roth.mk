@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit device configuration for roth.
-$(call inherit-product, device/nvidia/roth/full_roth.mk)
-
 # Inherit some common lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tv.mk)
+
+# Inherit device configuration for roth.
+$(call inherit-product, device/nvidia/roth/full_roth.mk)
 
 PRODUCT_NAME := lineage_roth
 PRODUCT_DEVICE := roth
