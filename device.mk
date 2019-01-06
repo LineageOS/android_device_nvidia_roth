@@ -16,7 +16,7 @@
 
 $(call inherit-product, device/nvidia/t114-common/t114.mk)
 
-PRODUCT_CHARACTERISTICS  := tv
+PRODUCT_CHARACTERISTICS  ?= tv
 PRODUCT_AAPT_CONFIG      := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 TARGET_SCREEN_HEIGHT     := 720
