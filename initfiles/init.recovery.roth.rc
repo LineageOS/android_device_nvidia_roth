@@ -12,12 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tv.mk)
+import init.recovery.ray_touch.rc
+import init.recovery.nv_dev_board.usb.rc
 
-# Inherit device configuration for roth.
-$(call inherit-product, device/nvidia/roth/lineage.mk)
-$(call inherit-product, device/nvidia/roth/full_roth.mk)
-
-PRODUCT_NAME := lineage_roth
-PRODUCT_DEVICE := roth
+on boot
+    # Needed for touch
+    mount ext4 /dev/block/platform/sdhci-tegra.3/by-name/FCT /mnt/factory ro context=u:object_r:factory_file:s0

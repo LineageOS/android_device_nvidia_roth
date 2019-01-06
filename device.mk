@@ -27,6 +27,15 @@ TARGET_SCREEN_WIDTH      := 1280
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
+# Init related
+PRODUCT_PACKAGES += \
+    fstab.roth \
+    init.roth.rc \
+    init.roth_common.rc \
+    init.recovery.roth.rc \
+    power.roth.rc \
+    ueventd.roth.rc
+
 # Kernel
 ifneq ($(TARGET_PREBUILT_KERNEL),)
 PRODUCT_COPY_FILES += \

@@ -1,4 +1,5 @@
-# Copyright (C) 2018 The LineageOS Project
+#
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,13 +12,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tv.mk)
+LOCAL_PATH := $(call my-dir)
 
-# Inherit device configuration for roth.
-$(call inherit-product, device/nvidia/roth/lineage.mk)
-$(call inherit-product, device/nvidia/roth/full_roth.mk)
+include $(CLEAR_VARS)
+LOCAL_MODULE                 := libinit_roth
+LOCAL_C_INCLUDES             := device/nvidia/tegra-common/init
+LOCAL_SRC_FILES              := init_roth.cpp
+LOCAL_WHOLE_STATIC_LIBRARIES := libinit_tegra
+include $(BUILD_STATIC_LIBRARY)
 
-PRODUCT_NAME := lineage_roth
-PRODUCT_DEVICE := roth
+include $(CLEAR_VARS)
+LOCAL_MODULE        := libinit_roth_vendor
+LOCAL_C_INCLUDES    := device/nvidia/tegra-common/init
+LOCAL_SRC_FILES     := init_roth.cpp
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_STATIC_LIBRARY)
