@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,23 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-$(call inherit-product, device/nvidia/t114-common/t114.mk)
+import init.recovery.ray_touch.rc
+import init.recovery.nv_dev_board.usb.rc
 
-PRODUCT_CHARACTERISTICS  ?= tv
-PRODUCT_AAPT_CONFIG      := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-TARGET_SCREEN_HEIGHT     := 720
-TARGET_SCREEN_WIDTH      := 1280
-
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-# Init related
-PRODUCT_PACKAGES += \
-    fstab.roth \
-    init.roth.rc \
-    init.roth_common.rc \
-    init.recovery.roth.rc \
-    power.roth.rc \
-    ueventd.roth.rc
+on boot
+    # Needed for touch
+    mount ext4 /dev/block/platform/sdhci-tegra.3/by-name/FCT /mnt/factory ro context=u:object_r:factory_file:s0

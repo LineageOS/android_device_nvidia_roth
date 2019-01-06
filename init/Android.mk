@@ -14,21 +14,12 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/nvidia/t114-common/t114.mk)
+LOCAL_PATH := $(call my-dir)
 
-PRODUCT_CHARACTERISTICS  ?= tv
-PRODUCT_AAPT_CONFIG      := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-TARGET_SCREEN_HEIGHT     := 720
-TARGET_SCREEN_WIDTH      := 1280
-
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-# Init related
-PRODUCT_PACKAGES += \
-    fstab.roth \
-    init.roth.rc \
-    init.roth_common.rc \
-    init.recovery.roth.rc \
-    power.roth.rc \
-    ueventd.roth.rc
+include $(CLEAR_VARS)
+LOCAL_MODULE_TAGS := optional
+LOCAL_C_INCLUDES := device/nvidia/tegra-common/init \
+                    device/nvidia/shield-common/init
+LOCAL_SRC_FILES := init_roth.cpp
+LOCAL_MODULE := libinit_roth
+include $(BUILD_STATIC_LIBRARY)
