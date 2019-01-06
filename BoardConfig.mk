@@ -25,6 +25,12 @@ TARGET_USERIMAGES_USE_EXT4         := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := roth
 
+# Kernel
+TARGET_KERNEL_SOURCE    := kernel/nvidia/mainline
+TARGET_KERNEL_CONFIG    := tegra_defconfig
+BOARD_KERNEL_IMAGE_NAME := zImage
+LZMA_RAMDISK_TARGETS    := recovery
+
 # Recovery
 TARGET_RECOVERY_FSTAB := device/nvidia/roth/initfiles/fstab.roth
 
