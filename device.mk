@@ -29,10 +29,14 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Init related
 PRODUCT_PACKAGES += \
+    fstab.dalmore \
     fstab.roth \
+    init.dalmore.rc \
     init.roth.rc \
     init.roth_common.rc \
+    init.recovery.dalmore.rc \
     init.recovery.roth.rc \
+    power.dalmore.rc \
     power.roth.rc \
     ueventd.roth.rc
 
