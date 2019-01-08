@@ -30,8 +30,9 @@
 
 void vendor_load_properties()
 {
-	//                                              device  name    model    id    sku   boot device type                 api dpi
-	std::vector<tegra_init::devices> devices = { { "roth", "thor", "SHIELD", 2560,    0, tegra_init::boot_dev_type::EMMC, 17, 214 } };
+	//                                              device     name       model     id    sku   boot device type                 api dpi
+	std::vector<tegra_init::devices> devices = { { "roth",    "thor",    "SHIELD",  2560,    0, tegra_init::boot_dev_type::EMMC, 17, 214 },
+	                                             { "dalmore", "dalmore", "Dalmore", 1647, 1000, tegra_init::boot_dev_type::EMMC, 17, 240 } };
 	tegra_init::build_version sav = { "5.1", "LMY47N", "01.00.32208_585.9399" };
 
 	tegra_init ti(devices);
