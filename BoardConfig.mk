@@ -25,6 +25,9 @@ TARGET_USERIMAGES_USE_EXT4         := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := roth
 
+# Audio
+BOARD_USES_TINYHAL_AUDIO := true
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH     := true
 BOARD_HAVE_BLUETOOTH_BCM := true
