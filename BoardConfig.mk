@@ -50,6 +50,11 @@ TARGET_RECOVERY_FSTAB := device/nvidia/roth/initfiles/fstab.roth
 # Sensors
 TARGET_SENSOR_VARIANT := tegra
 
+# TWRP Support
+ifeq ($(WITH_TWRP),true)
+include device/nvidia/roth/twrp/twrp.mk
+endif
+
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_tegra libinit_shield libinit_roth
 
