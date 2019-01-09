@@ -38,6 +38,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/nvidia/roth/comms
 # Bootloader versions
 TARGET_BOARD_INFO_FILE := device/nvidia/roth/board-info.txt
 
+# Hardware overlays
+BOARD_HARDWARE_CLASS := device/nvidia/roth/lineagehw/
+
 # Kernel
 ifneq ($(TARGET_PREBUILT_KERNEL),)
 BOARD_VENDOR_KERNEL_MODULES += $(wildcard $(dir $(TARGET_PREBUILT_KERNEL))/*.ko)
