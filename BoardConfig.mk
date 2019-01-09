@@ -39,3 +39,4 @@ TARGET_INIT_VENDOR_LIB := libinit_tegra libinit_shield libinit_roth
 
 include device/nvidia/t114-common/BoardConfigCommon.mk
 include device/nvidia/touch/BoardConfigTouch.mk
+include device/nvidia/shield-common/BoardConfigShield.mk

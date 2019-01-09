@@ -16,6 +16,7 @@
 
 $(call inherit-product, device/nvidia/t114-common/t114.mk)
 $(call inherit-product, device/nvidia/touch/raydium.mk)
+$(call inherit-product, device/nvidia/shield-common/shield.mk)
 
 PRODUCT_CHARACTERISTICS  ?= tv
 PRODUCT_AAPT_CONFIG      := normal
