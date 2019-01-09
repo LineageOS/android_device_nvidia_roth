@@ -12,6 +12,10 @@
    "target_path": "device/nvidia/touch"
  },
  {
+   "repository": "android_hardware_nvidia_sensors",
+   "target_path": "hardware/nvidia/sensors"
+ },
+ {
    "repository": "android_kernel_nvidia_mainline",
    "target_path": "kernel/nvidia/mainline"
  },

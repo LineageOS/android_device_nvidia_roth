@@ -44,6 +44,9 @@ DEVICE_MANIFEST_FILE := device/nvidia/roth/manifest.xml
 # Recovery
 TARGET_RECOVERY_FSTAB := device/nvidia/roth/initfiles/fstab.roth
 
+# Sensors
+TARGET_SENSOR_VARIANT := tegra
+
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_tegra libinit_shield libinit_roth
 
