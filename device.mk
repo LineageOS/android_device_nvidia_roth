@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+# Only include Shield apps for first party targets
+ifneq ($(filter $(word 2,$(subst _, ,$(TARGET_PRODUCT))), roth dalmore),)
+$(call inherit-product, device/nvidia/shield-common/shield.mk)
+endif
+
 TARGET_REFERENCE_DEVICE ?= roth
 TARGET_TEGRA_VARIANT    ?= common
 
