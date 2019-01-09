@@ -25,6 +25,13 @@ TARGET_USERIMAGES_USE_EXT4         := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := roth
 
+# Bluetooth
+BOARD_HAVE_BLUETOOTH     := true
+BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_CUSTOM_BT_CONFIG   := device/nvidia/roth/comms/vnd_roth.txt
+BCM_BLUETOOTH_MANTA_BUG  := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/nvidia/roth/comms
+
 # Kernel
 TARGET_KERNEL_SOURCE    := kernel/nvidia/mainline
 TARGET_KERNEL_CONFIG    := tegra_defconfig
