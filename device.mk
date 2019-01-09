@@ -26,6 +26,14 @@ TARGET_SCREEN_WIDTH      := 1280
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
+ifneq ("$(wildcard vendor/nvidia/shield/roth.mk)","")
+$(call inherit-product, vendor/nvidia/shield/roth.mk)
+else ifneq ("$(wildcard vendor/nvidia/roth/roth-vendor.mk)","")
+$(call inherit-product, vendor/nvidia/roth/roth-vendor.mk)
+else
+$(error "No proprietary vendor found.")
+endif
+
 # Init related
 PRODUCT_PACKAGES += \
     fstab.dalmore \
