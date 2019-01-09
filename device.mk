@@ -93,5 +93,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     sensors.tegra
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-service-nvidia \
+    thermalhal.dalmore.xml \
+    thermalhal.roth.xml
+
 # Wifi
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
