@@ -55,3 +55,6 @@ ifneq ($(TARGET_PREBUILT_KERNEL),)
 PRODUCT_COPY_FILES += \
     $(TARGET_PREBUILT_KERNEL):kernel
 endif
+
+# Wifi
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
