@@ -35,6 +35,9 @@ BOARD_CUSTOM_BT_CONFIG   := device/nvidia/roth/comms/vnd_roth.txt
 BCM_BLUETOOTH_MANTA_BUG  := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/nvidia/roth/comms
 
+# Bootloader versions
+TARGET_BOARD_INFO_FILE := device/nvidia/roth/board-info.txt
+
 # Kernel
 TARGET_KERNEL_SOURCE    := kernel/nvidia/mainline
 TARGET_KERNEL_CONFIG    := tegra_defconfig
