@@ -42,3 +42,6 @@ PRODUCT_PACKAGES += \
     power.molly.rc \
     power.roth.rc \
     ueventd.roth.rc
+
+# Wifi
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
