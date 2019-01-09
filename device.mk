@@ -35,6 +35,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 $(call inherit-product, vendor/nvidia/roth/roth-vendor.mk)
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    device/nvidia/roth/overlay
+
 # Init related
 PRODUCT_PACKAGES += \
     fstab.dalmore \
