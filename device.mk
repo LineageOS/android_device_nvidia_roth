@@ -67,6 +67,12 @@ ifeq ($(PRODUCT_IS_ATV),true)
         android.hardware.tv.input@1.0-impl
 endif
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.primary.$(LINEAGE_BUILD) \
+    audio_policy.conf \
+    nvaudio_conf.xml
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
