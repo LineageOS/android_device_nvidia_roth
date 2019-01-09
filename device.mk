@@ -34,6 +34,10 @@ else
 $(error "No proprietary vendor found.")
 endif
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    device/nvidia/roth/overlay
+
 # Init related
 PRODUCT_PACKAGES += \
     fstab.dalmore \
