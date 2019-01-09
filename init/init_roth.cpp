@@ -39,6 +39,9 @@ void vendor_load_properties()
 	tegra_init ti(devices);
 	ti.set_properties();
 	ti.set_fingerprints(sav);
+
+	if (ti.is_model("roth"))
+		ti.property_set("persist.tegra.panel.rotation", "90");
 }
 
 int vendor_handle_control_message(const std::string &msg, const std::string &arg)
