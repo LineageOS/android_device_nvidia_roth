@@ -59,6 +59,9 @@ void vendor_load_properties()
 	ti.set_properties();
 	ti.set_fingerprints(sav);
 
+	if (ti.is_model("roth"))
+		ti.property_set("persist.tegra.panel.rotation", "90");
+
 	if (ti.recovery_context()) {
 		ti.property_set("ro.product.vendor.model", ti.property_get("ro.product.model"));
 		ti.property_set("ro.product.vendor.manufacturer", ti.property_get("ro.product.manufacturer"));
