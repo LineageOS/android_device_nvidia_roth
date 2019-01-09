@@ -40,3 +40,4 @@ LZMA_RAMDISK_TARGETS            := recovery
 TARGET_RECOVERY_FSTAB := device/nvidia/roth/initfiles/fstab.roth
 
 include device/nvidia/t114-common/BoardConfigCommon.mk
+include device/nvidia/touch/BoardConfigTouch.mk
