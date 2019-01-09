@@ -1,2 +1,7 @@
 # Bluetooth
 ro.bt.bdaddr_path=/mnt/factory/bluetooth/bt_mac.txt
+
+# Legacy omx
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
+persist.media.treble_omx=false
