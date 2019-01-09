@@ -66,6 +66,11 @@ PRODUCT_PACKAGES += \
     audio_policy.conf \
     nvaudio_conf.xml
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger \
+    charger_res_images
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
