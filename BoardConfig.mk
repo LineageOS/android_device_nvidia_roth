@@ -55,6 +55,11 @@ TARGET_RECOVERY_FSTAB := device/nvidia/roth/initfiles/fstab.roth
 # Sensors
 TARGET_SENSOR_VARIANT := tegra
 
+# TWRP Support
+ifeq ($(WITH_TWRP),true)
+include device/nvidia/roth/twrp/twrp.mk
+endif
+
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
